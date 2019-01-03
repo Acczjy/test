@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	*{margin: 0px;padding: 0px;list-style: none;}
+	.box{
+		width: 471px;
+		height: 331px;
+	}
+	#ul{
+		height: 29px;
+		line-height:29px;
+		border-bottom:1px solid #FE9900;
+	}
+	#ul li{
+		font-size: 18px;
+		padding: 0 10px;
+		float: left;
+	}
+	#ul .active{
+		background-color: #FE9900;
+		color: #fff;
+	}
+	ol li{
+		margin-top: 18px;
+		height: 280px;
+		display: none;
+		font-size:12px;
+		color:green;
+	}
+	.o1{
+		font-size: 14px;
+		color: #0068B7;
+		text-align: center;
+		font-weight: bold;
+		padding-left: 10px;
+	}
+	.o2{
+		font-size: 12px;
+		color: #C8C8C8;
+		text-indent: 2em;
+		padding-left: 10px;
+	}
+	.show{
+		display: block;
+	}
+	.box-l{
+		margin-top: 12px;
+		margin-bottom: 20px;
+		border-bottom: 1px dashed black;
+	}
+	.box-ll{
+		height: 220px;
+	}
+	.box-ll p{
+		line-height: 29px;
+		margin-left: 10px;
+		color: black;
+	}
+	.box-ll span{
+		margin-left: 115px;
+	}
+</style>
+<body>
+	<div class="box">
+		<ul id="ul">
+			<li class="active">旅游要闻</li>
+			<li>新闻动态</li>
+		</ul>
+
+		<ol id="ol">
+			<li class="show">
+				<p class="o1">大美青海境外旅游宣传广告备受青睐</p>
+				<p class="o2">为扩大 “大美青海” 旅游品牌在境外客源地市场的知名度，省旅游局在香港网络、韩国首尔地铁投放青…</p>
+				<div class="box-l"></div>
+				<div class="box-ll">
+				<p>到2020年，我省乡村旅游接待点将达到1…<span>[2016-04-28]</span></p>
+				<p>到2020年，我省乡村旅游接待点将达到1…<span>[2016-04-28]</span></p>
+				<p>到2020年，我省乡村旅游接待点将达到1…<span>[2016-04-28]</span></p>
+				<p>到2020年，我省乡村旅游接待点将达到1…<span>[2016-04-28]</span></p>
+				<p>到2020年，我省乡村旅游接待点将达到1…<span>[2016-04-28]</span></p>
+				<p>到2020年，我省乡村旅游接待点将达到1…<span>[2016-04-28]</span></p>
+				<p>到2020年，我省乡村旅游接待点将达到1…<span>[2016-04-28]</span></p>
+				</div>
+			</li>
+			<li>XXXxxx</li>
+		</ol>
+	</div>
+	<script type="text/javascript">
+		var ul=document.getElementById('ul');
+		var uli=ul.getElementsByTagName('li');
+		var ol=document.getElementById('ol');
+		var oli=ol.getElementsByTagName('li');
+
+		for (var i=0;i<uli.length;i++){
+			uli[i].index=i;
+			uli[i].onclick=function(){
+				for(var j=0;j<uli.length;j++){
+					uli[j].className='';
+					oli[j].style.display='none';
+				}
+				this.className='active';
+				oli[this.index].style.display = 'block';
+			}
+		}
+
+	</script>
+</body>
+</html>
